@@ -1,0 +1,307 @@
+<html>
+  <head>
+    <title>Achtung Banditen?!</title><meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="assets/engine.js"></script>
+    <script src="assets/physics.js"></script>
+    <script src="assets/extras.js"></script>
+    <script src="assets/environment.js"></script>
+    <script src="assets/rain.js"></script>
+    <script src="assets/gif.js"></script>
+    <script src="assets/htmlrender.js"></script>
+    <script src="assets/teleport.js"></script>
+    <script src="assets/event.js"></script>
+    <script src="assets/sound.js"></script>
+
+<style>
+.a-dialog-allow-button {
+  background-color: green;
+}
+
+.a-dialog-deny-button {
+  background-color: red;
+}
+
+.a-dialog-ok-button {
+   background-color: black;
+ }
+</style>
+
+</head>
+  <body>
+
+<script type="text/javascript"> // <![CDATA[
+	if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+		document.location = "ios.html";
+	} // ]]>
+</script>
+
+<a-scene rain="width: 100; count: 10000;" physics="debug: true" loading-screen="dotsColor: red; backgroundColor: black" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true" antialias="true"
+cursor="rayOrigin: mouse" sound="src: #music; on: click; loop: true; volume: 0.9; rolloffFactor: 0">
+
+<!-- World -->
+
+<a-entity id="environment" environment="preset: goldmine; dressingAmount: 500; dressingColor: #2d2d2d; horizonColor: red;"></a-entity>
+
+<a-entity geometry="primitive: plane; height: 1.0; width: 4" material="color: black" text="value: \n Achtung Banditen?! Installazione di ARTOLDO (Sara Ferro &amp; Chris Weil) su base dell'Atlante delle Stragi Naziste e Fasciste in Italia; shader: msdf; font: assets/fonts/germaniaone/GermaniaOne-Regular.json; wrapCount: 40; align: center" position="-3.45589 5 -19.2" rotation="0 0 7"></a-entity>
+<a-plane id="pc" width="2" height="2" position="-4.840 2.302 -16.99" material="src: images/pc.png; transparent: true" shadow="" geometry="" rotation="0 0 0"></a-plane>
+<a-plane id="mobile" width="2" height="2" position="-2.910 2.302 -16.99" material="src: images/mobile.png; transparent: true" shadow="" geometry="" rotation="0 0 0"></a-plane>
+
+<!-- Sound -->
+
+    <audio id="music" src="assets/sound.mp3" crossorigin="anonymous"></audio>
+    
+<!-- Camera -->
+
+<a-entity id="rig" position="-4 0 -14" movement-controls kinematic-body gamepad-controls look-controls="pointerLockEnabled:true;">
+<a-entity id="camera" camera position="0 1.6 0" cursor-visible="true">
+</a-entity>
+</a-entity>
+
+<!-- Objects -->
+
+<a-entity id="box1" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-8.33499 8.839 0.44742" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box2" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-13.13495 9.00932 -5.5234" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>     
+
+<a-entity id="box3" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="0.8339 8.517 -11.35503"  geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box4" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="11.10 9.027 -14.98" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box5" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="20.38 7.875 -7.423" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box6" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-14.40479 8.641 13.09522" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box7" scale="1.3 1.3 1.3" rotation="0 0 0" static-body position="-1.83444 6.909 -4.128" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box8" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="2.275 8.976 5.160" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<a-entity id="box9" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="4.774 8.447 15.187" geometry="" material="src: ./images/00.gif" animation="property: rotation; to: 0 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+
+<!-- Numbers -->
+
+<a-entity id="Agrigento" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Agrigento \n 12 luglio 1943 \n [6 vittime complessive in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="5.14899 3.20168 14.47101" rotation="0 180 -7"></a-entity>
+
+<a-entity id="Alessandria" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Alessandria \n 9 settembre 1943 - 26 aprile 1945 \n [336 vittime complessive in 93 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="14.312 1.92089 5.23448" rotation="0 360 -10"></a-entity>
+
+<a-entity id="Ancona" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Ancona \n 6 febbraio 1944 - 8 agosto 1944 \n [163 vittime complessive in 59 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="16.52179 2.27957 2.88373" rotation="0 -180 8"></a-entity>
+
+<a-entity id="Aosta" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Aosta \n 28 aprile 1944 - 31 marzo 1945 \n [142 vittime complessive in 31 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-20.25293 1.90734 1.34513" rotation="0 90 6.999825383113269"></a-entity>
+
+<a-entity id="Arezzo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Arezzo \n 8 marzo 1944 - 18 dicembre 1944 \n [1178 vittime complessive in 211 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 45; align: center" position="3.82049 1.65438 14.96592" rotation="0 -90 7"></a-entity>
+
+<a-entity id="Ascoli Piceno" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Ascoli Piceno \n 28 novembre 1943 - 18 giugno 1944 \n [81 vittime complessive in 26 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="18.20 2.4145 12.080" rotation="0 -90 -10"></a-entity>
+
+<a-entity id="Asti" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Asti \n 7 gennaio 1944 - 24 aprile 1945 \n [80 vittime complessive in 50 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-3.77649 1.84112 19.30398" rotation="0 180 7"></a-entity>
+
+<a-entity id="Avellino" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Avellino \n 10 settembre 1943 - 30 settembre 1943 \n [18 vittime complessive in 12 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-15.45044 1.80634 -0.68756" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Bari" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Bari \n 9 settembre 1943 - 19 ottobre 1943 \n [20 vittime complessive in 10 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-17.75649 1.81677 9.79427" rotation="0 90 -10"></a-entity>
+
+<a-entity id="Barletta-Andria-Trani" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Barletta-Andria-Trani \n 10 settembre 1943 - 16 settembre 1943 \n [58 vittime complessive in 5 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="9.86011 2.07205 21.60331" rotation="0 -180 8"></a-entity>
+
+<a-entity id="Belluno" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Belluno \n 31 ottobre 1943 - 4 maggio 1945 \n [373 vittime complessive in 151 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-9.12172 1.83561 1.17024" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Benevento" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Benevento \n 21 settembre 1943 - 27 ottobre 1943 \n [30 vittime complessive in 17 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="7.13593 2.38448 -1.76007" rotation="0 320 7"></a-entity>
+
+<a-entity id="Bergamo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Bergamo \n 7 dicembre 1943 - 28 aprile 1945 \n [201 vittime complessive in 44 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-13.13809 2 -4.477" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Biella" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Biella \n 12 dicembre 1943 - 1 maggio 1945 \n [186 vittime complessive in 43 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-9.65641 1.62655 -10.21636" rotation="0 0 7"></a-entity>
+
+<a-entity id="Bologna" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Bologna \n 10 settembre 1943 - 21 aprile 1945 \n [1977 vittime complessive in 297 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 45; align: center" position="-12.28514 1.42109 -5.26301" rotation="0 90 10"></a-entity>
+
+<a-entity id="Bolzano" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Bolzano \n 9 settembre 1943 - 4 maggio 1945 \n [104 vittime complessive in 12 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-13.64715 2.88324 12.49034" rotation="0 90 7"></a-entity>
+
+<a-entity id="Brescia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Brescia \n 13 novembre 1943 - 27 aprile 1945 \n [115 vittime complessive in 48 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="18.26104 1.78663 -0.46474" rotation="0 -90 -7"></a-entity>
+
+<a-entity id="Campobasso" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Campobasso \n 30 settembre 1943 - 21 ottobre 1943 \n [11 vittime complessive in 8 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="6.76291 1.44867 -2.05938" rotation="0 -90 -10"></a-entity>
+
+<a-entity id="Caserta" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Caserta \n 9 settembre 1943 - 22 dicembre 1943 \n [755 vittime complessive in 278 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-8.68833 2.32104 -0.23196" rotation="0 -180 8"></a-entity>
+
+<a-entity id="Catania" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Catania \n 17 luglio 1943 - 12 agosto 1943 \n [38 vittime complessive in 9 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="13.55021 0.99679 4.76142" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Chieti" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Chieti \n 14 settembre 1943 -  5 giugno 1944 \n [389 vittime complessive in 162 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="0.03187 0.9 -11.14994" rotation="0 -90 7"></a-entity>
+
+<a-entity id="Como" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Como \n 23 dicembre 1943 - 24 aprile 1945 \n [32 vittime complessive in 13 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="6.08861 2.70299 21.61468" rotation="0 180 -10"></a-entity>
+
+<a-entity id="Cosenza" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Cosenza \n 9 settembre 1943 \n [1 vittima in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-19.32039 2.34677 -9.91637" rotation="0 90 7"></a-entity>
+
+<a-entity id="Cremona" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Cremona \n 9 settembre 1943 - 28 aprile 1945 \n [110 vittime complessive in 41 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-17.48543 2.07219 -5.67869" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Cuneo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Cuneo \n 11 settembre 1943 - 29 aprile 1945 \n [864 vittime complessive in 165 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="10.94827 2.68193 -14.11768" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Fermo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Fermo \n 2 ottobre 1943 - 20 giugno 1944 \n [31 vittime complessive in 18 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="16.50772 1.7347 20.14106" rotation="0 180 8"></a-entity>
+
+<a-entity id="Ferrara" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Ferrara \n 15 novembre 1943 - 22 aprile 1945 \n [77 vittime complessive in 25 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="17.72445 2.54395 -14.28829" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Firenze" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Firenze \n 2 dicembre 1943 - 6 settembre 1944 \n [591 vittime complessive in 130 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center;" position="-12.25315 2.68193 -5.17315" rotation="0 90 -10"></a-entity>
+
+<a-entity id="Fiume" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Fiume \n 2 ottobre 1943 - 10 marzo 1945 \n [398 vittime complessive in 5 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-14.12873 1.57539 12.11311" rotation="0 130 7"></a-entity>
+
+<a-entity id="Foggia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Foggia \n 9 settembre 1943 - 20 ottobre 1943 \n [51 vittime complessive in 13 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="5.69925 1.85633 21.35456" rotation="0 180 -10"></a-entity>
+
+<a-entity id="Forli-Cesena" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Forli-Cesena \n 25 settembre 1943 - 23 novembre 1944 \n [396 vittime complessive in 107 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="1.78252 1.32243 -11.17798" rotation="0 90 7"></a-entity>
+
+<a-entity id="Frosinone" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Frosinone \n 24 febbraio 1944 - 4 giugno 1944 \n [154 vittime complessive in 43 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-9.08058 3.52602 -10.98047" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Genova" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Genova \n 14 gennaio 1944 - 24 aprile 1945 \n [224 vittime complessive in 28 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-7.39552 1.49078 0.56522" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Gorizia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Gorizia \n 15 settembre 1943 - 8 aprile 1945 \n [33 vittime complessive in 13 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="5.59146 2.03734 15.22663" rotation="0 90 -10"></a-entity>
+
+<a-entity id="Gorizia-Slovenia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Gorizia-Slovenia \n 22 dicembre 1943 - 4 aprile 1945 \n [83 vittime complessive in 7 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="7.63124 2.36189 17.22156" rotation="0 180 8"></a-entity>
+
+<a-entity id="Grosseto" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Grosseto \n 25 ottobre 1943 - 28 giugno 1944 \n [134 vittime complessive in 75 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-15.51615 2.88054 -0.66714" rotation="0 66 6.999825383113269"></a-entity>
+
+<a-entity id="Imperia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Imperia \n 1 luglio 1944 - 8 aprile 1945 \n [323 vittime complessive in 51 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-14.0484 2.25797 12.1619" rotation="0 180 7"></a-entity>
+
+<a-entity id="Isernia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Isernia \n 3 ottobre 1943 - 18 dicembre 1943 \n [38 vittime complessive in 16 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="13.61 2.362 3.890" rotation="0 180 0"></a-entity>
+
+<a-entity id="L'Aquila" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di L'Aquila \n 12 settembre 1943 - 12 giugno 1944 \n [371 vittime complessive in 137 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="7.12555 1.50 7.05201" rotation="0 0 7"></a-entity>
+
+<a-entity id="La Spezia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di La Spezia \n 10 settembre 1943 - 20 aprile 1945 \n [159 vittime complessive in 50 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="7.81127 2.92803 6.19146" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Latina" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Latina \n 9 settembre 1943 - 26 maggio 1944 \n [42 vittime complessive in 25 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-9.38046 2.10699 22.28764" rotation="0 180 -10"></a-entity>
+
+<a-entity id="Lecco" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Lecco \n 16 ottobre 1943 - 8 gennaio 1945 \n [38 vittime complessive in 7 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-14.62548 2.20814 -14.58515" rotation="0 90 8"></a-entity>
+
+<a-entity id="Livorno" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Livorno \n 17 settembre 1943 - 22 luglio 1944 \n [57 vittime complessive in 17 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="20.41555 2.54395 -14.77368" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Lodi" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Lodi \n 7 gennaio 1944 - 27 aprile 1945 \n [73 vittime complessive in 25 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-10.96841 2.1476 -14.28051" rotation="0 29.999999999999996 7"></a-entity>
+
+<a-entity id="Lucca" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Lucca \n 10 settembre 1943 - 25 marzo 1945 \n [730 vittime complessive in 74 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="0.83372 1.8601 -10.47101" rotation="0 0 7"></a-entity>
+
+<a-entity id="Macerata" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Macerata \n 1 ottobre 1943 - 17 luglio 1944 \n [282 vittime complessive in 97 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-8.83271 2.6227 1.47" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Mantova" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Mantova \n 9 settembre 1943 - 29 aprile 1945 \n [51 vittime complessive in 18 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="16.00023 1.40472 2.84361" rotation="0 -160 7"></a-entity>
+
+<a-entity id="Massa-Carrara" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Massa-Carrara \n 8 marzo 1944 - 23 aprile 1945 \n [931 vittime complessive in 72 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="2.158 1.604 6.085" rotation="0 330 -7"></a-entity>
+
+<a-entity id="Matera" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Matera \n 21 settembre 1943 \n [26 vittime complessive in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-13.60703 2.22416 17.21753" rotation="0 150 -10"></a-entity>
+
+<a-entity id="Messina" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Messina \n 1 agosto 1943 - 15 agosto 1943 \n [14 vittime complessive in 6 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-21.02593 2.95244 -0.4903" rotation="0 90 8"></a-entity>
+
+<a-entity id="Milano" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Milano \n 12 settembre 1943 - 26 aprile 1945 \n [249 vittime complessive in 123 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-1.75448 1.355 -3.44983" rotation="0 0 8"></a-entity>
+
+<a-entity id="Modena" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Modena \n 9 settembre 1943 - 23 aprile 1945 \n [799 vittime complessive in 191 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="1.773 2.589 5.802" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Monza e della Brianza" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Monza e della Brianza \n 29 settembre 1943 - 26 aprile 1945 \n [41 vittime complessive in 22 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-19.50498 2.88324 14.98065" rotation="0 90 7"></a-entity>
+
+<a-entity id="Napoli" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Napoli \n 9 settembre 1943 - 9 ottobre 1943 \n [570 vittime complessive in 172 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="2.542 1.593 4.259" rotation="0 166.33652342001955 -9.999832398418258"></a-entity>
+
+<a-entity id="Novara" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Novara \n 15 settembre 1943 - 27 aprile 1945 \n [164 vittime complessive in 47 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-3.73929 2.70265 19.29665" rotation="0 180 -10"></a-entity>
+
+<a-entity id="Padova" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Padova \n 20 febbraio 1944 - 29 aprile 1945 \n [513 vittime complessive in 129 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="19.76268 0.89224 -7.69829" rotation="0 -90 -7"></a-entity>
+
+<a-entity id="Parma" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Parma \n 1 gennaio 1944 - 27 aprile 1945 \n [412 vittime complessive in 117 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="20.37868 1.55829 -6.50978" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Pavia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pavia \n 9 settembre 1943 - 8 maggio 1945 \n [235 vittime complessive in 125 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-9.1067 2.55094 -10.314" rotation="0 90 8"></a-entity>
+
+<a-entity id="Perugia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Perugia \n 31 ottobre 1943 - 18 agosto 1944 \n [410 vittime complessive in 149 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="10.64404 1.37961 -13.85624" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Pesaro e Urbino" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pesaro e Urbino \n 23 settembre 1943 - 21 settembre 1944 \n [132 vittime complessive in 64 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="2.03723 1.48745 22.43026" rotation="0 180 7"></a-entity>
+
+<a-entity id="Pescara" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pescara \n 15 settembre 1943 - 11 giugno 1944 \n [65 vittime complessive in 32 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-15.17127 1.27882 -13.94162" rotation="0 29.999999999999996 -10"></a-entity>
+
+<a-entity id="Piacenza" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Piacenza \n 28 ottobre 1943 - 21 marzo 1945 \n [85 vittime complessive in 18 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="7.04876 1.6583 5.39641" rotation="0 -180 7"></a-entity>
+
+<a-entity id="Pisa" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pisa: \n 25 marzo 1944 - 2 settembre 1944 \n [380 vittime complessive in 54 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="6.82693 3.85146 7.10893" rotation="0 0 -7"></a-entity>
+
+<a-entity id="Pistoia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pistoia \n 12 settembre 1943 - 9 ottobre 1944 \n [235 vittime complessive in 77 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-18.122 2.518 9.789" rotation="0 150 -10"></a-entity>
+
+<a-entity id="Pola" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pola \n 11 settembre 1943 - 2 ottobre 1944 \n [592 vittime complessive in 20 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-1.60254 1.49766 -4.84465" rotation="0 180 8"></a-entity>
+
+<a-entity id="Pordenone" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Pordenone \n 14 aprile 1944 - 1 maggio 1945 \n [156 vittime complessive in 69 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="16.08895 0.87645 20.23553" rotation="0 -130 6.999825383113269"></a-entity>
+
+<a-entity id="Potenza" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Potenza \n 9 settembre 1943 - 24 settembre 1943 \n [26 vittime complessive in 7 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-20.213 2.5792 2.45346" rotation="0 90 7"></a-entity>
+
+<a-entity id="Prato" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Prato \n 1 giugno 1944 - 26 settembre 1944 \n [47 vittime complessive in 9 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-14.43274 1.72685 13.93145" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Ravenna" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Ravenna \n 24 ottobre 1943 - 10 aprile 1945 \n [472 vittime complessive in 119 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="17.78423 1.20527 -14.65595" rotation="0 -50 7"></a-entity>
+
+<a-entity id="Reggio di Calabria" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Reggio di Calabria \n 12 agosto 1943 - 6 settembre 1943 \n [19 vittime complessive in 3 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="7.87628 1.44493 -1.95443" rotation="0 90 -7"></a-entity>
+
+<a-entity id="Reggio Emilia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Reggio Emilia \n 28 dicembre 1943 - 23 aprile 1945 \n [439 vittime complessive in 69 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="16.46954 2.191 4.13068" rotation="0 0 20"></a-entity>
+
+<a-entity id="Rieti" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Rieti \n 27 settembre 1943 - 14 giugno 1944 \n [213 vittime complessive in 47 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="18.19196 3.31973 13.06564" rotation="0 -90 8"></a-entity>
+
+<a-entity id="Rimini" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Rimini \n 10 ottobre 1943 - 26 settembre 1944 \n [121 vittime complessive in 52 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="7.01485 0.77828 -2.7077" rotation="0 -180 6.999825383113269"></a-entity>
+
+<a-entity id="Roma" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Roma \n 8 settembre 1943 - 14 giugno 1944 \n [721 vittime complessive in 105 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-2.48858 2.64169 -4.72256" rotation="0 -130 7"></a-entity>
+
+<a-entity id="Rovigo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Rovigo \n 26 maggio 1944 - 26 aprile 1945 \n [101 vittime complessive in 28 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="9.85021 3.22408 21.44502" rotation="0 -180 -10"></a-entity>
+
+<a-entity id="Salerno" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Salerno \n 8 settembre 1943 - 2 ottobre 1943 \n [36 vittime complessive in 22 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="1.74548 2.57005 22.50078" rotation="0 -180 7"></a-entity>
+
+<a-entity id="Savona" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Savona \n 11 settembre 1943 - 24 aprile 1945 \n [200 vittime complessive in 53 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="18.25225 2.79662 -0.44864" rotation="0 -90 8"></a-entity>
+
+<a-entity id="Siena" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Siena \n 15 gennaio 1944 - 17 luglio 1944 \n [186 vittime complessive in 102 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="0.08908 2.67862 -10.99567" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Siracusa" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Siracusa \n luglio 1943 \n [2 vittime complessive in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-18.88269 1.40725 -7.90634" rotation="0 90 7"></a-entity>
+
+<a-entity id="Sondrio" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Sondrio \n 19 marzo 1944 - 27 aprile 1945 \n [69 vittime complessive in 36 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-9.02316 0.830 -10.99113" rotation="0 119.99999999999999 0" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Taranto" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Taranto \n 19 settembre 1943 \n [1 vittima in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-12.83421 0.8492 20.09153" rotation="0 180 7"></a-entity>
+
+<a-entity id="Teramo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Teramo \n 25 settembre 1943 - 17 giugno 1944 \n [78 vittime complessive in 28 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="7.3674 2.8624 18.41253" rotation="0 90 8"></a-entity>
+
+<a-entity id="Terni" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Terni \n 12 settembre 1943 - 18 giugno 1944 \n [67 vittime complessive in 32 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="17.98 1.284 12.951" rotation="0 -90 6.999825383113269"></a-entity>
+
+<a-entity id="Torino" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Torino \n 10 settembre 1943 - 1 maggio 1945 \n [945 vittime complessive in 163 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="19.75915 2.54395 -7.08455" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Trento" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Trento \n 9 settembre 1943 - 6 maggio 1945 \n [157 vittime complessive in 56 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-17.53526 2.88324 -5.49292" rotation="0 90 7"></a-entity>
+
+<a-entity id="Treviso" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Treviso \n 12 aprile 1944 - 1 maggio 1945 \n [254 vittime complessive in 86 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="13.97933 2.88443 5.23915" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Trieste" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Trieste \n 7 marzo 1944 - 28 aprile 1945 \n [730 vittime complessive in 74 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="-2.00147 2.16126 -3.36462"></a-entity>
+
+<a-entity id="Udine" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Udine \n 2 ottobre 1943 - 5 maggio 1945 \n [726 vittime complessive in 154 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="-8.39837 3.22924 -0.23635" rotation="0 180 8"></a-entity>
+
+<a-entity id="Udine-Slovenia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Udine-Slovenia \n 11 ottobre 1943 \n [16 vittime complessive in 1 episodio]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="14.55 1.222 -5.426" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Varese" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Varese \n 9 gennaio 1944 - 19 marzo 1945 \n [22 vittime complessive in 10 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="17.11799 1.13642 17.06481" rotation="0 220 7"></a-entity>
+
+<a-entity id="Venezia" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Venezia \n 25 febbraio 1944 - 28 aprile 1945 \n [120 vittime complessive in 48 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="16.4108 3.22785 4.12167" rotation="0 0 -10"></a-entity>
+
+<a-entity id="Verbano-Cusio-Ossola" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Verbano-Cusio-Ossola \n 15 settembre 1943 - 15 aprile 1945 \n [275 vittime complessive in 52 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="12.00198 1.54027 -14.97937" rotation="0 90 7"></a-entity>
+
+<a-entity id="Vercelli" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Vercelli \n 21 dicembre 1943 - 29 aprile 1945 \n [210 vittime complessive in 35 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json;  wrapCount: 40; align: center" position="5.85574 4.07219 14.78536" rotation="0 90 8"></a-entity>
+
+<a-entity id="Verona" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Verona \n 9 settembre 1943 - 29 aprile 1945 \n [205 vittime complessive in 75 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="20.23973 1.47212 6.40497" rotation="0 -66.16402026611722 6.999825383113269"></a-entity>
+
+<a-entity id="Vicenza" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Vicenza \n 10 settembre 1943 - 30 aprile 1945 \n [751 vittime complessive in 186 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="2.367 2.2335 4.294" rotation="0 180 -3.0000000000000004"></a-entity>
+
+<a-entity id="Viterbo" geometry="primitive: plane; height: 0.5; width: 3" material="color: black" text="value: \n Provincia di Viterbo \n 14 ottobre 1943 - 17 giugno 1944 \n [96 vittime complessive in 20 episodi]; shader: msdf; font: assets/fonts/robotomono/RobotoMono-Regular.json; wrapCount: 40; align: center" position="6.1166 2.42955 5.99386" rotation="0 -90 -10"></a-entity>
+
+
+<!-- Wall -->
+
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 0 0" scale="60 20 2" position="0 0 21.0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 -90 0" scale="60 20 2" position="20 0 0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 -90 0" scale="60 20 2" position="-18 0 0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" otation="0 0 0" scale="60 20 2" position="0 0 -15"></a-box>
+
+<!-- Floor -->
+
+<a-plane static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="-90 0 0" position="0 0 0"></a-plane>
+ 
+</a-scene>
+
+  </body>
+</html>
+
+
+
+
+
+
